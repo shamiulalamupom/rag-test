@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eval": "tsx src/cli_eval.ts"
+    "ingest": "tsx src/cli_ingest.ts",
+    "query": "tsx src/cli_query.ts",
+    "eval": "tsx src/cli_eval.ts",
+    "docker-up": "docker-compose up -d && echo 'Containers started'",
+    "docker-down": "docker-compose down",
+    "docker-logs": "docker-compose logs -f",
+    "dev": "DEBUG_RAG=true tsx src/cli_query.ts",
+    "setup": "npm install && docker-compose up -d && echo 'Setup complete!'"
   },
   "keywords": [],
   "author": "",

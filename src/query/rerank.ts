@@ -4,12 +4,10 @@ import { rerankerCache_module } from "../cache/rerank";
 import { logger } from "../utils/logger";
 import type { RetrievedChunk } from "./retrieve";
 
-const RerankerResponseSchema = z.array(
-  z.object({
-    chunkId: z.string().uuid(),
-    score: z.number().min(0).max(10),
-  }),
-);
+const RerankerResponseSchema = z.object({
+  chunkId: z.string().uuid(),
+  score: z.number().min(0).max(10),
+});
 
 export interface RerankerOptions {
   enabled?: boolean;
@@ -72,11 +70,8 @@ Respond with ONLY a JSON object: {"chunkId": "${chunk.chunkId}", "score": <numbe
       });
 
       const parsed = RerankerResponseSchema.parse(JSON.parse(response));
-      if (parsed.length > 0) {
-        const score = parsed[0].score;
-        scores[chunk.chunkId] = score;
-        rerankerCache_module.set(question, chunk.text, score);
-      }
+      scores[chunk.chunkId] = parsed.score;
+      rerankerCache_module.set(question, chunk.text, parsed.score);
     } catch (err) {
       logger.debug(
         `Rerank error for chunk ${chunk.chunkId.slice(0, 8)}: ${err}`,

@@ -1,0 +1,15 @@
+{"id": "q1", "question": "What is the People's Republic of Bangladesh?", "expected_contains": ["unitary", "independent", "sovereign", "Republic"], "category": "basic"}
+{"id": "q2", "question": "What is the state language of Bangladesh?", "expected_contains": ["Bangla"], "category": "literal"}
+{"id": "q3", "question": "When was Bangladesh's independence proclaimed?", "expected_contains": ["26th day of March", "1971"], "category": "factual"}
+{"id": "q4", "question": "What is a fundamental aim of the State?", "expected_contains": ["democratic", "socialist", "exploitation"], "category": "interpretation"}
+{"id": "q5", "question": "What does the preamble say about the Constitution?", "expected_contains": ["sacred duty", "supremacy", "embodiment"], "category": "reference"}
+{"id": "q6", "question": "What territories comprise Bangladesh?", "expected_contains": ["East Pakistan", "March", "1971"], "category": "factual"}
+{"id": "q7", "question": "What about human rights in Bangladesh?", "expected_contains": ["fundamental human rights", "freedom", "equality"], "category": "interpretation"}
+{"id": "q8", "question": "Describe the nature of the Republic.", "expected_contains": ["unitary", "independent", "sovereign"], "category": "basic"}
+{"id": "q9", "question": "What was the historic struggle mentioned?", "expected_contains": ["national liberation", "independence"], "category": "interpretation"}
+{"id": "q10", "question": "What kind of society is Bangladesh aiming for?", "expected_contains": ["socialist", "free from exploitation", "rule of law"], "category": "interpretation"}
+{"id": "q11", "question": "What are the political ideals of Bangladesh?", "expected_contains": ["democratic", "equality", "justice"], "category": "interpretation"}
+{"id": "q12", "question": "Who established Bangladesh?", "expected_contains": ["people of Bangladesh", "proclaimed", "independence"], "category": "factual"}
+{"id": "q13", "question": "What is the constitutional role of the people?", "expected_contains": ["people", "proclaimed", "independence"], "category": "interpretation"}
+{"id": "q14", "question": "State language requirements", "expected_contains": ["Bangla", "state language"], "category": "literal"}
+{"id": "q15", "question": "How many articles are mentioned in Part I?", "expected_contains": ["Article"], "category": "basic"}
